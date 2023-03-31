@@ -1,0 +1,96 @@
+{
+  "member": {
+    "Prof": [
+      {
+        "name": "john",
+        "email": "123@123.com",
+        "description": "kind"
+      }
+    ],
+    "Postdoc": [],
+    "PhD": [],
+    "MS": [
+      {
+        "name": "john",
+        "email": "123@123.com",
+        "description": "kind"
+      },
+      {
+        "name": "mac",
+        "email": "123@123.com",
+        "description": "strong"
+      },
+      {
+        "name": "john",
+        "email": "123@123.com",
+        "description": "kind"
+      },
+      {
+        "name": "mac",
+        "email": "123@123.com",
+        "description": "strong"
+      },
+      {
+        "name": "john",
+        "email": "123@123.com",
+        "description": "kind"
+      },
+      {
+        "name": "mac",
+        "email": "123@123.com",
+        "description": "strong"
+      }
+    ],
+    "Intern": [],
+    "Alumni": []
+  },
+
+  "project": [
+    {
+      "title": "Smart Farming: Precision Agriculture using IoT",
+      "organization": "ATTP",
+      "period": "2018-2022",
+      "description": "This project focuses on developing a precision agriculture system that uses IoT (Internet of Things) technology to provide farmers with real-time data on soil moisture, temperature, humidity, and other key metrics. This information can then be used to optimize crop yields, reduce water usage, and improve overall farm efficiency."
+    },
+    {
+      "title": "Smart Farming: Precision Agriculture using IoT",
+      "organization": "ATTP",
+      "period": "2018-2022",
+      "description": "This project focuses on developing a precision agriculture system that uses IoT (Internet of Things) technology to provide farmers with real-time data on soil moisture, temperature, humidity, and other key metrics. This information can then be used to optimize crop yields, reduce water usage, and improve overall farm efficiency."
+    }
+  ],
+  "paper": [
+    {
+      "year": 2022,
+      "content": []
+    },
+    {
+      "year": 2021,
+      "content": [
+        {
+          "title": "Application of Artificial Intelligence in Phenomics",
+          "author": "S Nabwire, HK Suh, MS Kim, I Baek, BK Cho",
+          "cite": "Sensors 21 (13), 4363 21 2021",
+          "url": ""
+        },
+        {
+          "title": "High-Throughput Phenotyping Approach for the Evaluation of Heat Stress in Korean Ginseng (Panax ginseng Meyer) Using a Hyperspectral Reflectance Image",
+          "author": "E Park, YS Kim, MK Omari, HK Suh, MA Faqeerzada, MS Kim, I Baek, ...",
+          "cite": "Sensors 21 (16), 5634 9 2021",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "content": [
+        {
+          "title": "Investigation on combinations of colour indices and threshold techniques in vegetation segmentation for volunteer potato control in sugar beet",
+          "author": "HK Suh, JW Hofstee, EJ van Henten",
+          "cite": "Computers and Electronics in Agriculture 179, 105819 12 2020",
+          "url": " "
+        }
+      ]
+    }
+  ]
+}
