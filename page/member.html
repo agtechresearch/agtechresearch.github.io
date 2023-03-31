@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgTech Research</title>
+    <link rel="stylesheet" href="../index.css" />
     <style>
-        img {
-            width:180px;
-            max-height:230px;
-        }
+      main img {
+          width:170px;
+          max-height:230px;
+      }
+      section {
+          display:grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+      }
+
+      @media (max-width:1000px) {
+          section { grid-template-columns: repeat(2, 1fr); }
+      }
     </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page/member.html">Member</a></li>
-                <li><a href="page/paper.html">Paper</a></li>
-                <li><a href="page/project.html">Project</a></li>
-                <li><a href="page/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Professor</h2>
-            <article>
-                <img src="../resource/member/박보검3.jpeg">
-                <h3>{name}</h3> 
-                <h5>{email}</h5>
-                <p>{description}</p>
-            </article>
-            <h2>Master</h2> 
-            <div style="display:grid; grid-template-columns: repeat(4, 1fr);">
-                <article>  
-                    <img src="../resource/member/박보검.jpeg">
-                    <h3>{name}</h3> 
-                    <h5>{email}</h5>
-                    <p>{description}</p>
-                </article>
-                <article>  
-                    <img src="../resource/member/박보검2.jpeg">
-                    <h3>{name}</h3> 
-                    <h5>{email}</h5>
-                    <p>{description}</p>
-                </article>
-            </div>
-        <section>
-            
+  </head>
+  <body>
+    <header></header>
 
-        </section>
-    </main>
-    <footer>
-        <p>Copyrigth 2021. Agreculture Technology. All rights reserved.</p>
-    </footer>
-</body>
+    <main></main>
 
+    <footer></footer>
+
+    <script type="module">
+      import { header, footer } from "../index.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        header(document);
+        fetch("https://lazybuttrying.github.io/afs/data.json")
+          .then((response) => response.json())
+          .then((json) => json.member)
+          .then((data) => {
+            for (const degree in data) {
+              if (data[degree].length === 0) continue;
+
+              const section = document.createElement("section");
+              for (const person of data[degree]) {
+                const article = document.createElement("article");
+                article.innerHTML = `
+                                <img src="../resource/img/person/${person.name}.jpg"/>
+                                <h3>${person.name}</h3> 
+                                <h5>${person.email}</h5>
+                                <p>${person.description}</p>
+                            `;
+                section.appendChild(article);
+              }
+
+              const h2 = document.createElement("h2");
+              h2.appendChild(document.createTextNode(degree));
+              document.body.children[1].append(h2, section);
+            }
+          });
+        footer(document);
+      });
+    </script>
+  </body>
 </html>
