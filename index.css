@@ -8,6 +8,7 @@
 body {
     margin: 20px;
     text-align:justify;
+    max-width: 1500px;
 }
 
 a {

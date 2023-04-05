@@ -2,55 +2,46 @@
   "member": {
     "Prof": [
       {
-        "name": "john",
-        "email": "123@123.com",
-        "description": "kind"
+        "name": "서현권",
+        "email": "davidsuh79@sejong.ac.kr",
+        "description": "Remote Crop Cultivation"
       }
     ],
     "Postdoc": [],
     "PhD": [],
     "MS": [
       {
-        "name": "john",
-        "email": "123@123.com",
-        "description": "kind"
+        "name": "안주연",
+        "email": "jyahn0926@sju.ac.kr",
+        "description": "Crop Growth Prediction"
       },
       {
-        "name": "mac",
-        "email": "123@123.com",
-        "description": "strong"
+        "name": "박현지",
+        "email": "hyunji7674@gmail.com",
+        "description": "Vision-Based Crop Detection"
       },
       {
-        "name": "john",
-        "email": "123@123.com",
-        "description": "kind"
-      },
-      {
-        "name": "mac",
-        "email": "123@123.com",
-        "description": "strong"
-      },
-      {
-        "name": "john",
-        "email": "123@123.com",
-        "description": "kind"
-      },
-      {
-        "name": "mac",
-        "email": "123@123.com",
-        "description": "strong"
+        "name": "김요엘",
+        "email": "longtailedtit12@gmail.com",
+        "description": "Environment Prediction"
       }
     ],
-    "Intern": [],
+    "Intern": [
+      {
+        "name": "김도연",
+        "email": "dodev0987@gmail.com",
+        "description": "CV & RL"
+      }
+    ],
     "Alumni": []
   },
 
   "project": [
     {
-      "title": "Smart Farming: Precision Agriculture using IoT",
-      "organization": "ATTP",
-      "period": "2018-2022",
-      "description": "This project focuses on developing a precision agriculture system that uses IoT (Internet of Things) technology to provide farmers with real-time data on soil moisture, temperature, humidity, and other key metrics. This information can then be used to optimize crop yields, reduce water usage, and improve overall farm efficiency."
+      "title": "ALARAD: Smart Farm Platform for high-quality and traceable yield.",
+      "organization": "ITTP",
+      "period": "2018-Present",
+      "description": " A multi-purpose DDS based on proximal and remote sensing"
     },
     {
       "title": "Smart Farming: Precision Agriculture using IoT",
@@ -59,6 +50,7 @@
       "description": "This project focuses on developing a precision agriculture system that uses IoT (Internet of Things) technology to provide farmers with real-time data on soil moisture, temperature, humidity, and other key metrics. This information can then be used to optimize crop yields, reduce water usage, and improve overall farm efficiency."
     }
   ],
+
   "paper": [
     {
       "year": 2022,
