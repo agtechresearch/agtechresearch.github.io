@@ -1,3 +1,5 @@
+let datafile = "https://agtechresearch.github.io/site/resource/data.json";
+
 function header(document) {
   const div = document.createElement("div");
   const nav = document.createElement("nav");
@@ -34,4 +36,4 @@ function footer(document) {
   document.body.children[2].append(div, p);
 }
 
-export { header, footer };
+export { header, footer, datafile };

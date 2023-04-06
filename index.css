@@ -8,7 +8,6 @@
 body {
     margin: 20px;
     text-align:justify;
-    max-width: 1500px;
 }
 
 a {
@@ -31,6 +30,11 @@ header {
 header img {
     max-height: 60px;
     margin-bottom:10px;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin: auto;
 }
 
 header ul {
@@ -65,7 +69,8 @@ main {
 }
 
 @media (max-width:620px) {
-    header nav {
-        display: none;
-    }    
+    header h2 {
+        font-size: large;
+        line-height: 100%;
+    }
 }

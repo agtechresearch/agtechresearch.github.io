@@ -30,11 +30,11 @@
     <footer></footer>
 
     <script type="module">
-      import { header, footer } from "../index.js";
+      import { header, footer, datafile } from "../index.js";
 
       document.addEventListener("DOMContentLoaded", () => {
         header(document);
-        fetch("https://agtechresearch.github.io/site/resource/data.json")
+        fetch(datafile)
           .then((response) => response.json())
           .then((json) => json.member)
           .then((data) => {
@@ -45,10 +45,12 @@
               for (const person of data[degree]) {
                 const article = document.createElement("article");
                 article.innerHTML = `
+                            <a href="${person.url}">
                                 <img src="../resource/img/person/${person.name}.jpg"/>
                                 <h3>${person.name}</h3> 
                                 <h5>${person.email}</h5>
                                 <p>${person.description}</p>
+                            </a>
                             `;
                 section.appendChild(article);
               }

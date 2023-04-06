@@ -14,6 +14,9 @@
       main h3 {
           margin-bottom:0;
       }
+      article {
+        margin: 40px auto;
+      }
       article p {
           color:gray;
           font-size: small;
@@ -32,11 +35,11 @@
     <footer></footer>
 
     <script type="module">
-      import { header, footer } from "../index.js";
+      import { header, footer, datafile } from "../index.js";
 
       document.addEventListener("DOMContentLoaded", () => {
         header(document);
-        fetch("https://agtechresearch.github.io/site/resource/data.json")
+        fetch(datafile)
           .then((response) => response.json())
           .then((json) => json.project)
           .then((data) => {

@@ -1,42 +1,49 @@
 {
   "member": {
-    "Prof": [
+    "Professor": [
       {
         "name": "서현권",
-        "email": "davidsuh79@sejong.ac.kr",
-        "description": "Research interests: Remote Crop Cultivation"
+        "email": "davidsuh79@sejong.edu",
+        "description": "Remote Crop Cultivation",
+        "url": "https://scholar.google.com/citations?user=k74yTt8AAAAJ&hl=en"
       }
     ],
     "Postdoc": [],
     "PhD": [],
-    "MS": [
+    "Master": [
       {
         "name": "안주연",
         "email": "jyahn0926@sju.ac.kr",
-        "description": "Research interests: Time-series Forecasting in Greenhouse"
+        "description": "Time-series Forecasting in Greenhouse",
+        "url": "https://www.linkedin.com/in/%EC%A3%BC%EC%97%B0-%EC%95%88-841b91214/"
       },
       {
         "name": "박현지",
         "email": "hyunji7674@gmail.com",
-        "description": "Research interests: Vision-Based Crop Detection"
+        "description": "Vision-Based Crop Detection",
+        "url": ""
       },
       {
         "name": "김요엘",
         "email": "longtailedtit12@gmail.com",
-        "description": "Research interests: Environment Prediction"
+        "description": "Environment Prediction",
+        "url": ""
       }
     ],
     "Intern": [
       {
         "name": "김도연",
         "email": "dodev0987@gmail.com",
-        "description": "Research interests: CV & RL"
+        "description": "CV & RL",
+        "url": "https://www.linkedin.com/in/dy-dev-kim/"
       }
     ],
-    "Research administrative assistant":[
+    "Staff": [
       {
         "name": "박다현",
-        "email": ""
+        "email": "parkda0423@naver.com",
+        "description": "Research administrative assistant",
+        "url": ""
       }
     ],
     "Alumni": []
@@ -45,55 +52,62 @@
   "project": [
     {
       "title": "ALARAD: Smart Farm Platform for high-quality and traceable yield.",
-      "organization": "ITTP",
+      "organization": "IITP",
       "period": "2018-Present",
       "description": " A multi-purpose DDS based on proximal and remote sensing(제안: The main overall objective of ALARAD is to optimize decision making process through the proximal and remote monitoring of meteorological, soil, plant and fruit identifying the critical physiological variables for health, growth and vigor in order to adapt and refine the standard cultivation techniques maximizing fruit yield, quality and food security while minimizing environmental impact and other risks.)"
-    },
-    {
-      "title": "Smart Farming: Precision Agriculture using IoT",
-      "organization": "ATTP",
-      "period": "2018-2022",
-      "description": "This project focuses on developing a precision agriculture system that uses IoT (Internet of Things) technology to provide farmers with real-time data on soil moisture, temperature, humidity, and other key metrics. This information can then be used to optimize crop yields, reduce water usage, and improve overall farm efficiency."
     }
   ],
 
   "paper": [
     {
+      "year": 2023,
+      "content": [
+        {
+          "title": "Assessing Tree-Based Boosting Algorithms for Crop Growth Forecasting in Greenhouse Cultivation",
+          "author": "Ju Yeon Ahn, Hyeonji Park, Soo Hyun Park, Joon Yong Kim Hyun Kwon Suh",
+          "cite": "GreenSys 2023",
+          "url": "https://www.actahort.org/members/symposiaa?action=abstractforcoauthor&abstractforcoauthorlink=zKXtwXmtwXm-3317981-BEbkzKXzKX"
+        },
+        {
+          "title": "Exploring the Potential of YOLOv8 for Real-time Strawberry Flower Detection in Greenhouses",
+          "author": "Hyeonji Park, Ju Yeon Ahn, Doyeon Kim, Yoel Kim, Hyun Kwon Suh",
+          "cite": "GreenSys 2023",
+          "url": "https://www.actahort.org/members/symposiaa?action=abstractforcoauthor&abstractforcoauthorlink=zKXtwXmtwXm-2012356-BEbkYfmbtwXm"
+        }
+      ]
+    },
+    {
       "year": 2022,
       "content": [
         {
-          "title": "Nondestructive discrimination of seedless from seeded watermelon seeds by using multivariate and deep learning image analysis",
-          "author": "P Mukasa, C Wakholi, M Faqeerzada, H Amanah, H Kim, R Joshi, HK Suh, G Kim, H Lee, MS Kim, I Baek, BK Cho",
-          "cite": "Computers and Electronics in Agriculture 194, 106799 3 2022",
-          "url": " "
-        }
-      ]
-    },
-    {
-      "year": 2021,
-      "content": [
-        {
-          "title": "Application of Artificial Intelligence in Phenomics",
-          "author": "S Nabwire, HK Suh, MS Kim, I Baek, BK Cho",
-          "cite": "Sensors 21 (13), 4363 21 2021",
-          "url": ""
+          "title": "딸기 수과 개수 산출 성능 비교: 딥러닝 기반 객체 감지와 OpenCV 기반 영상 처리",
+          "author": "Doyeon Kim, Yoel Kim, Hyeonji Park, Ju Yeon Ahn, Hyun Kwon Suh",
+          "cite": "한국정보과학회 학술발표논문집 2022",
+          "url": "https://drive.google.com/file/d/1soHUjuZOhgxKXzkOZDMORA4S4pJr0Icz/view?usp=sharing"
         },
         {
-          "title": "High-Throughput Phenotyping Approach for the Evaluation of Heat Stress in Korean Ginseng (Panax ginseng Meyer) Using a Hyperspectral Reflectance Image",
-          "author": "E Park, YS Kim, MK Omari, HK Suh, MA Faqeerzada, MS Kim, I Baek, ...",
-          "cite": "Sensors 21 (16), 5634 9 2021",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "year": 2020,
-      "content": [
+          "title": "Time-series forecasting of tomato greenhouse environment using Facebook Prophet",
+          "author": "Ju Yeon Ahn, Hyeonji Park, Doyeon Kim, Hyun Kwon Suh",
+          "cite": "The XX CIGR World Congress 2022, Dec. 5 - 9, 2022",
+          "url": "https://drive.google.com/file/d/1soHUjuZOhgxKXzkOZDMORA4S4pJr0Icz/view?usp=sharing"
+        },
         {
-          "title": "Investigation on combinations of colour indices and threshold techniques in vegetation segmentation for volunteer potato control in sugar beet",
-          "author": "HK Suh, JW Hofstee, EJ van Henten",
-          "cite": "Computers and Electronics in Agriculture 179, 105819 12 2020",
-          "url": " "
+          "title": "Applicability assessment of flower detection performance using Detectron2 and YOLOv5 for edge computing in a strawberry greenhouse",
+          "author": "Hyeonji Park, Doyeon Kim, Ju Yeon Ahn, Hyun Kwon Suh",
+          "cite": "The XX CIGR World Congress 2022, Dec. 5 - 9, 2022",
+          "url": "https://drive.google.com/file/d/1sn6V65f701T9MRlucM-LU6lQiYWNQlrA/view?usp=sharing"
+        },
+        {
+          "title": "온실 내 온도에 대한 머신러닝 알고리즘의 시계열 예측 성능 비교",
+          "author": "Hyun Kwon Suh, Ju Yeon Ahn, HyeonJi Park, Doyeon Kim",
+          "cite": "환경생물조절학회 학술발표논문집 2022",
+          "url": "https://drive.google.com/file/d/1jOHqkGTXd00ctLiR94NBg7TQOjwdGRHC/view?usp=sharing"
+        },
+        {
+          "title": "합성 데이터셋과 딥러닝 모델을 이용한 식물 엽면적 추정",
+          "author": "Hyun Kwon Suh, Ju Yeon Ahn, HyeonJi Park",
+          "cite": "한국방송미디어공학회 학술발표논문집 2022",
+          "url": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11134039"
         }
       ]
     }
