@@ -4,7 +4,7 @@
       {
         "name": "서현권",
         "email": "davidsuh79@sejong.ac.kr",
-        "description": "Remote Crop Cultivation"
+        "description": "Research interests: Remote Crop Cultivation"
       }
     ],
     "Postdoc": [],
@@ -13,24 +13,24 @@
       {
         "name": "안주연",
         "email": "jyahn0926@sju.ac.kr",
-        "description": "Time-series Forecasting in Greenhouse"
+        "description": "Research interests: Time-series Forecasting in Greenhouse"
       },
       {
         "name": "박현지",
         "email": "hyunji7674@gmail.com",
-        "description": "Vision-Based Crop Detection"
+        "description": "Research interests: Vision-Based Crop Detection"
       },
       {
         "name": "김요엘",
         "email": "longtailedtit12@gmail.com",
-        "description": "Environment Prediction"
+        "description": "Research interests: Environment Prediction"
       }
     ],
     "Intern": [
       {
         "name": "김도연",
         "email": "dodev0987@gmail.com",
-        "description": "CV & RL"
+        "description": "Research interests: CV & RL"
       }
     ],
     "Alumni": []
