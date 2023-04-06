@@ -41,7 +41,7 @@
       "title": "ALARAD: Smart Farm Platform for high-quality and traceable yield.",
       "organization": "ITTP",
       "period": "2018-Present",
-      "description": " A multi-purpose DDS based on proximal and remote sensing"
+      "description": " A multi-purpose DDS based on proximal and remote sensing(제안: The main overall objective of ALARAD is to optimize decision making process through the proximal and remote monitoring of meteorological, soil, plant and fruit identifying the critical physiological variables for health, growth and vigor in order to adapt and refine the standard cultivation techniques maximizing fruit yield, quality and food security while minimizing environmental impact and other risks.)"
     },
     {
       "title": "Smart Farming: Precision Agriculture using IoT",
@@ -54,7 +54,14 @@
   "paper": [
     {
       "year": 2022,
-      "content": []
+      "content": [
+        {
+          "title": "Nondestructive discrimination of seedless from seeded watermelon seeds by using multivariate and deep learning image analysis",
+          "author": "P Mukasa, C Wakholi, M Faqeerzada, H Amanah, H Kim, R Joshi, HK Suh, G Kim, H Lee, M Kim, I Baek, BK Cho",
+          "cite": "Computers and Electronics in Agriculture 194, 106799 3 2022",
+          "url": " "
+        }
+      ]
     },
     {
       "year": 2021,
