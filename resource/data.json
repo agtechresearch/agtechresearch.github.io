@@ -51,10 +51,16 @@
 
   "project": [
     {
-      "title": "ALARAD: Smart Farm Platform for high-quality and traceable yield.",
+      "title": "Smart Farm Platform for high-quality and traceable yield. A multi-purpose DDS based on proximal and remote sensing. (ALARAD)",
       "organization": "IITP",
-      "period": "2018-Present",
-      "description": " A multi-purpose DDS based on proximal and remote sensing(제안: The main overall objective of ALARAD is to optimize decision making process through the proximal and remote monitoring of meteorological, soil, plant and fruit identifying the critical physiological variables for health, growth and vigor in order to adapt and refine the standard cultivation techniques maximizing fruit yield, quality and food security while minimizing environmental impact and other risks.)"
+      "period": "2021.07-2024.06",
+      "description": "To optimize the decision making process through the proximal and remote monitoring of meteorological, soil, plant and fruit identifying the critical physiological variables for health, growth and vigor in order to adapt and refine the standard cultivation techniques maximizing fruit yield, quality and food security while minimizing environmental impact and other risks."
+    },
+    {
+      "title": "Development of autonomus environment control platform for greenhouses using artificial intelligence",
+      "organization": "IPET",
+      "period": "2021.04-2024.12",
+      "description": "To develop an AI-based fully autonomous integrated environmental control technology for operating a smart farming, a complex environmental control platform will be created that allows cultivators to implement their desired cultivation strategies by monitoring real-time growth and environmental data."
     }
   ],
 
@@ -63,8 +69,14 @@
       "year": 2023,
       "content": [
         {
+          "title": "RNN-based Models for Effective Prediction of Crop Growth Based on Environmental Factors",
+          "author": "Ju Yeon Ahn, Hyeonji Park, Yoel Kim, Doyeon Kim, Soo Hyun Park, Hyun Kwon Suh",
+          "cite": "2023 한국원예학회",
+          "url": "https://drive.google.com/file/d/1b0kMtcQzaWcz0N8zhI6NtHs3X2jnLfxm/view?usp=share_link"
+        },
+        {
           "title": "Assessing Tree-Based Boosting Algorithms for Crop Growth Forecasting in Greenhouse Cultivation",
-          "author": "Ju Yeon Ahn, Hyeonji Park, Soo Hyun Park, Joon Yong Kim Hyun Kwon Suh",
+          "author": "Ju Yeon Ahn, Hyeonji Park, Soo Hyun Park, Joon Yong Kim, Hyun Kwon Suh",
           "cite": "GreenSys 2023",
           "url": "https://www.actahort.org/members/symposiaa?action=abstractforcoauthor&abstractforcoauthorlink=zKXtwXmtwXm-3317981-BEbkzKXzKX"
         },
