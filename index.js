@@ -1,4 +1,4 @@
-let datafile = "https://agtechresearch.github.io/site/resource/data.json";
+let datafile = "https://agtechresearch.github.io/agtechresearch.github.io/resource/data.json";
 
 function header(document) {
   const div = document.createElement("div");
