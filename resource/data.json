@@ -3,6 +3,7 @@
     "Professor": [
       {
         "name": "서현권",
+        "period": ,
         "email": "davidsuh79@sejong.edu",
         "description": "Remote Crop Cultivation",
         "url": "https://scholar.google.com/citations?user=k74yTt8AAAAJ&hl=en"
@@ -45,6 +46,7 @@
     "Staff": [
       {
         "name": "박다현",
+        "period": ,
         "email": "parkda0423@naver.com",
         "description": "Research administrative assistant",
         "url": ""
@@ -75,8 +77,20 @@
         {
           "title": "RNN-based Models for Effective Prediction of Crop Growth Based on Environmental Factors",
           "author": "Ju Yeon Ahn, Hyeonji Park, Yoel Kim, Doyeon Kim, Soo Hyun Park, Hyun Kwon Suh",
-          "cite": "2023 한국원예학회",
-          "url": "https://drive.google.com/file/d/1b0kMtcQzaWcz0N8zhI6NtHs3X2jnLfxm/view?usp=share_link"
+          "cite": "한국원예학회 학술발표논문집 2023",
+          "url": "https://drive.google.com/file/d/1dqrp1NLv0q6TeAbhIuTRJXruc_sFGy-c/view?usp=drive_link"
+        },
+        {
+          "title": "Performance Evaluation of Strawberry Flower Detection by YOLOv5 and YOLOv8",
+          "author": "Hyeonji Park, Doyeon Kim, Ju Yeon Ahn, Yoel Kim, Hyun Kwon Suh",
+          "cite": "한국원예학회 학술발표논문집 2023",
+          "url": "https://drive.google.com/file/d/10MpgQ5ExytkmfhJP4nTym-XN00f-gK0r/view?usp=drive_link"
+        },
+        {
+          "title": "YOLOv8 모델 기반의 딸기 생육 자동 모니터링 시스템 개발",
+          "author": "Hyeonji Park, Doyeon Kim, Ju Yeon Ahn, Yoel Kim, Hyun Kwon Suh",
+          "cite": "환경생물조절학회 학술발표논문집 2023",
+          "url": "https://drive.google.com/file/d/1S9MR9eIvICqGQt8AyhHoOlRUtGKfyBkY/view?usp=drive_link"
         },
         {
           "title": "Assessing Tree-Based Boosting Algorithms for Crop Growth Forecasting in Greenhouse Cultivation",
