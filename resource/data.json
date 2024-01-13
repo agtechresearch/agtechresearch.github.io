@@ -11,30 +11,32 @@
     ],
     "Postdoc": [],
     "PhD": [],
-    "Master": [
+    "Researcher": [
       {
         "name": "박현지",
         "period": "2022.02 ~ ",
         "email": "",
-        "description": "Vision-Based Crop Detection",
+        "description": "Computer vision, Reinforcement learning",
         "url": ""
-      },
+      }
+    ],
+    "Master(MSc)": [
       {
         "name": "김요엘",
         "period": "2023.02 ~ ",
         "email": "",
         "description": "Environment Prediction",
         "url": ""
-      }
-    ],
-    "Intern": [
+      },
       {
         "name": "김도연",
-        "period": "2022.07 ~ 2023.07",
+        "period": "2022.07 ~ 2023.07; 2024.01 ~",
         "email": "",
         "description": "CV & RL",
         "url": "https://www.linkedin.com/in/dy-dev-kim/"
-      },
+      }
+    ],
+    "Undergraduate Intern": [
       {
         "name": "조준희",
         "period": "2023.07 ~ ",
