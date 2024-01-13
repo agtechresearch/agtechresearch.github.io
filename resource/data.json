@@ -89,6 +89,12 @@
 
   "project": [
     {
+      "title": "Saemangeum Global Food Hub Development Research",
+      "organization": "MAFRA (Ministry of Agriculture, Food and Rural Affairs)",
+      "period": "2024.01-ongoing",
+      "description": "Basic Conceptualization and Feasibility Study for the Development of the Saemangeum Global Food Hub"
+    },
+    {
       "title": "Smart Farm Platform for high-quality and traceable yield. A multi-purpose DDS based on proximal and remote sensing. (ALARAD)",
       "organization": "IITP",
       "period": "2021.07-2024.06",
@@ -104,8 +110,31 @@
 
   "paper": [
     {
+      "year": 2024,
+      "content": [
+        {
+          "title": "Evaluating Time-Series Prediction of Temperature, Relative Humidity, and CO2 in the Greenhouse with Transformer-Based and RNN-Based Models",
+          "author": "Ju Yeon Ahn, Yoel Kim, Hyeonji Park, Soo Hyun Park, Hyun Kwon Suh",
+          "cite": "Agronomy (revision in progress)",
+          "url": ""
+        },
+        {
+          "title": "Automated Strawberry Growth Monitoring in Greenhouses: A Comparative Study on Fruit and Flower Detection Models",
+          "author": "",
+          "cite": "Remote sensing (in preparation)",
+          "url": ""
+        }
+      ]
+    },
+    {
       "year": 2023,
       "content": [
+        {
+          "title": "Novel Method for Crop Growth Tracking with Deep Learning Model on an Edge Rail Camera",
+          "author": "Jaewon Moon, Seungtaek Oh, Hyun Kwon Suh, Hyeonji Park, Ha Seon Sim, Jung Su Jo, Sung Kyeom Kim, Seungwook Choi, Francisco Andres Pérez",
+          "cite": "Computers and Electronics in Agriculture (review in progress)",
+          "url": ""
+        },
         {
           "title": "RNN-based Models for Effective Prediction of Crop Growth Based on Environmental Factors",
           "author": "Ju Yeon Ahn, Hyeonji Park, Yoel Kim, Doyeon Kim, Soo Hyun Park, Hyun Kwon Suh",
