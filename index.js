@@ -14,8 +14,8 @@ function header(document) {
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="member.html">Member</a></li>
-            <li><a href="paper.html">Publications</a></li>
-            <li><a href="project.html">Research Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="research.html">Research</a></li>
         </ul>
     `;
   document.body.children[0].append(div, nav);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AgTech Research</title>
+    <title>Agtech Research</title>
     <link rel="stylesheet" href="index.css" />
     <style>
       main {
@@ -18,20 +18,31 @@
     </style>
   </head>
   <body>
-    <header>
+
+    <header></header>
+
+    <script type="module">
+      import { header } from "./index.js";
+      document.addEventListener("DOMContentLoaded", () => {
+        footer(document);
+      });
+    </script>
+
+
+    <!-- <header>
       <div style="display: flex; flex-direction: row; gap: 10px;">
         <img src="./resource/img/icon.png" />
-        <h2>AgTech Research</h2>
+        <h2>Agtech Research</h2>
       </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="page/member.html">Member</a></li>
-          <li><a href="page/paper.html">Publications</a></li>
-          <li><a href="page/project.html">Research Projects</a></li>
+          <li><a href="page/publications.html">Publications</a></li>
+          <li><a href="page/research.html">Research</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     <main>
       <img src="resource/img/home.jpg" style="width:80%" />
 
