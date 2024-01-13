@@ -29,7 +29,7 @@ function footer(document) {
         <h3>Agtech Research</h3>
         <h5>Chungmu Bldg. 502B, Sejong University</h5>
         <h5>209 Neungdong, Gwangjin-gu, Seoul, Korea</h5>
-        <h5>+82.2.3408.3114</h5>
+        <h5>+82.2.3408.3879</h5>
     `;
 
   p.innerText = "Copyright 2024 AgTech Research | All Rights Reserved";
