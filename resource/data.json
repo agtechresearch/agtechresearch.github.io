@@ -10,7 +10,15 @@
       }
     ],
     "Postdoc": [],
-    "PhD": [],
+    "PhD": [
+      {
+        "name": "권순덕",
+        "period": "2024.01 ~ ",
+        "email": "",
+        "description": "Data analysis, Simulation",
+        "url": ""
+      }
+    ],
     "Researcher": [
       {
         "name": "박현지",
@@ -45,8 +53,15 @@
         "url": ""
       },
       {
-        "name": "이도현",
+        "name": "조준희",
         "period": "2023.11 ~ ",
+        "email": "",
+        "description": "",
+        "url": ""
+      },
+      {
+        "name": "신동석",
+        "period": "2024.01 ~ ",
         "email": "",
         "description": "",
         "url": ""
