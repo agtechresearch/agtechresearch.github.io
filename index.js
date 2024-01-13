@@ -7,7 +7,7 @@ function header(document) {
   div.style.cssText = "display: flex; flex-direction: row; gap: 10px;";
   div.innerHTML = `
         <img src="../resource/img/icon.png">
-        <h2>AgTech Research</h2>
+        <h2>Agtech Research</h2>
     `;
 
   nav.innerHTML = `
@@ -15,7 +15,7 @@ function header(document) {
             <li><a href="../index.html">Home</a></li>
             <li><a href="member.html">Member</a></li>
             <li><a href="paper.html">Publications</a></li>
-            <li><a href="project.html">Research projects</a></li>
+            <li><a href="project.html">Research Projects</a></li>
         </ul>
     `;
   document.body.children[0].append(div, nav);
