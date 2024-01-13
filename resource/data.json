@@ -96,19 +96,19 @@
     },
     {
       "title": "Research on developing greenhouse simulators to estimate crop yields and energy consumption",
-      "organization": "MAFRA (Ministry of Agriculture, Food and Rural Affairs)",
+      "organization": "EPIS (Korea Agency of Education, Promotion and Information Service in Food, Agriculture, Forestry and Fisheries)",
       "period": "2023.09-ongoing",
       "description": "Greenhouse environment and crop growth simulator with energy consumption estimation"
     },
     {
       "title": "Smart Farm Platform for high-quality and traceable yield. A multi-purpose DDS based on proximal and remote sensing. (ALARAD)",
-      "organization": "IITP",
+      "organization": "IITP (Institute of Information & Communications Technology Planning & Evaluation)",
       "period": "2021.07-2024.06",
       "description": "To optimize the decision making process through the proximal and remote monitoring of meteorological, soil, plant and fruit identifying the critical physiological variables for health, growth and vigor in order to adapt and refine the standard cultivation techniques maximizing fruit yield, quality and food security while minimizing environmental impact and other risks."
     },
     {
       "title": "Development of autonomus environment control platform for greenhouses using artificial intelligence",
-      "organization": "IPET",
+      "organization": "IPET (Korea Institute of Planning and Evaluation for Technology in Food, Agriculture and Forestry)",
       "period": "2021.04-2024.12",
       "description": "To develop an AI-based fully autonomous integrated environmental control technology for operating a smart farming, a complex environmental control platform will be created that allows cultivators to implement their desired cultivation strategies by monitoring real-time growth and environmental data."
     }
