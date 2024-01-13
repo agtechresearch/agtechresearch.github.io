@@ -13,9 +13,9 @@ function header(document) {
   nav.innerHTML = `
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="member.html">Member</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="research.html">Research</a></li>
+            <li><a href="page/member.html">Member</a></li>
+            <li><a href="page/publications.html">Publications</a></li>
+            <li><a href="page/research.html">Research</a></li>
         </ul>
     `;
   document.body.children[0].append(div, nav);
