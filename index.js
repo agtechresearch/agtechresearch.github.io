@@ -14,8 +14,8 @@ function header(document) {
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="member.html">Member</a></li>
-            <li><a href="paper.html">Paper</a></li>
-            <li><a href="project.html">Project</a></li>
+            <li><a href="paper.html">Publications</a></li>
+            <li><a href="project.html">Research projects</a></li>
         </ul>
     `;
   document.body.children[0].append(div, nav);
@@ -26,13 +26,13 @@ function footer(document) {
   const p = document.createElement("p");
 
   div.innerHTML = `
-        <h3>AgTech Research</h3>
-        <h5>Sejong University</h5>
-        <h5>Neungdong, Gwangjin-gu</h5>
-        <h5>Seoul, South Korea</h5>
+        <h3>Agtech Research</h3>
+        <h5>Chungmu Bldg. 502B, Sejong University</h5>
+        <h5>209 Neungdong, Gwangjin-gu, Seoul, Korea</h5>
+        <h5>+82.2.3408.3114</h5>
     `;
 
-  p.innerText = "Copyright 2023 AgTech Research | All Rights Reserved";
+  p.innerText = "Copyright 2024 AgTech Research | All Rights Reserved";
   document.body.children[2].append(div, p);
 }
 
