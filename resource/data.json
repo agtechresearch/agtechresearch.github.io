@@ -121,8 +121,8 @@
         {
           "title": "Evaluating Time-Series Prediction of Temperature, Relative Humidity, and CO2 in the Greenhouse with Transformer-Based and RNN-Based Models",
           "author": "Ju Yeon Ahn, Yoel Kim, Hyeonji Park, Soo Hyun Park, Hyun Kwon Suh",
-          "cite": "Agronomy (revision in progress)",
-          "url": ""
+          "cite": "Agronomy (published; 21 Feb 2024)",
+          "url": "https://doi.org/10.3390/agronomy14030417"
         },
         {
           "title": "Automated Strawberry Growth Monitoring in Greenhouses: A Comparative Study on Fruit and Flower Detection Models",
