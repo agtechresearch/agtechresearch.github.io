@@ -25,16 +25,17 @@
         "email": "juliuskwon79@gmail.com",
         "description": "Robotics, Computer vision, Reinforcement learning, Computational Fluid Dynamics",
         "url": ""
-      }
-    ],
-    "Researcher": [
+      },
       {
         "name": "박현지",
-        "period": "2022.02 ~ 2024.02 M.S. / 2024.03 ~",
-        "email": "",
+        "period": "2022.02 ~ 2024.02 M.S. / 2024.03 ~ 2025.02 PMR / 2025.03 ~ ",
+        "email": "hyeonji_park@sju.ac.kr",
         "description": "Computer vision, Reinforcement learning",
         "url": "https://www.linkedin.com/in/hyeonji-park-498a13252/"
       }
+    ],
+    "Researcher": [
+      
     ],
     "Master(MSc)": [
       {
