@@ -9,13 +9,21 @@
         "url": "https://scholar.google.com/citations?user=k74yTt8AAAAJ&hl=en"
       }
     ],
-    "Postdoc": [],
+    "Postdoc": [
+      {
+        "name": "신나라",
+        "period": "2024.03 ~ ",
+        "email": "nala.shin@yahoo.com",
+        "description": "Supply chain management, logistics optimization",
+        "url": ""
+      }
+    ],
     "PhD": [
       {
         "name": "권순덕",
         "period": "2024.01 ~ ",
-        "email": "",
-        "description": "Data analysis, Simulation",
+        "email": "juliuskwon79@gmail.com",
+        "description": "Robotics, Computer vision, Reinforcement learning, Computational Fluid Dynamics",
         "url": ""
       }
     ],
@@ -32,38 +40,38 @@
       {
         "name": "김요엘",
         "period": "2023.02 ~ ",
-        "email": "",
+        "email": "longtailedtit12@gmail.com",
         "description": "time-series analysis, energyplus simulation",
         "url": ""
       },
       {
-        "name": "김도연",
-        "period": "2022.07 ~ 2023.07; 2024.01 ~",
-        "email": "",
-        "description": "Computer vision, Reinforcement learning",
-        "url": "https://www.linkedin.com/in/dy-dev-kim/"
-      }
-    ],
-    "Undergraduate Intern": [
-      {
-        "name": "조준희",
-        "period": "2023.07 ~ ",
-        "email": "",
-        "description": "",
-        "url": ""
-      },
-      {
         "name": "이도현",
-        "period": "2023.11 ~ ",
+        "period": "2023.11 ~ 2025.02 UG Intern / 2025.02 ~ ",
         "email": "",
         "description": "",
         "url": ""
       },
       {
         "name": "신동석",
-        "period": "2024.01 ~ ",
+        "period": "2024.01 ~ 2025.02 UG Intern / 2025.02 ~ ",
+        "email": "shinds@sju.ac.kr",
+        "description": "Computer Vision in Agriculture",
+        "url": ""
+      }
+    ],
+    "Undergraduate Intern": [
+      {
+        "name": "전형서",
+        "period": "2024.08 ~ ",
+        "email": "ericjun05@mrmr.by-works.com",
+        "description": "Undergraduate Research Assistant",
+        "url": "https://blog.naver.com/ericjun05"
+      },
+      {
+        "name": "김상준",
+        "period": "2024.12 ~ ",
         "email": "",
-        "description": "",
+        "description": "Undergraduate Research Assistant",
         "url": ""
       }
     ],
@@ -88,6 +96,18 @@
   },
 
   "project": [
+    {
+      "title": "Development and Demonstration of an Integrated Intelligent Vertical Farming Systems with Protected Fruit Vegetables",
+      "organization": "IPET (Korea Institute of Planning and Evaluation for Technology in Food, Agriculture and Forestry) / KoSFarm (Korea Smart Farm R&D Foundation)",
+      "period": "2024.04-ongoing",
+      "description": "The research focuses on the development and demonstration of an intelligent vertical farming system for facility-grown crops. It aims to establish a crop growth monitoring system for individual plants and develop an AI model for optimal control by analyzing environmental and growth data. Additionally, the study integrates an automated harvesting system with monitoring and transportation technologies to enhance agricultural automation."
+    },
+    {
+      "title": "Development of an AI and Agricultural Robot-Driven Vertical Cultivation System for Korean Melons",
+      "organization": "GARES(Gyeongsangbuk-do Agricultural Research & Extension Services",
+      "period": "2024.04-ongoing",
+      "description": "research project focuses on the development of an AI and robotics-based vertical cultivation system for oriental melon. This includes the establishment of a monitoring system for crop growth, the development of an AI-driven algorithm to determine fruit location and harvest readiness, and the implementation of robotic navigation with obstacle detection and optimal path planning. Furthermore, the study aims to integrate key robotic harvesting technologies into a unified system to improve efficiency."
+    },
     {
       "title": "Saemangeum Global Food Hub Development Research",
       "organization": "MAFRA (Ministry of Agriculture, Food and Rural Affairs)",
@@ -119,28 +139,28 @@
       "year": 2024,
       "content": [
         {
+          "title": "Novel Method for Crop Growth Tracking with Deep Learning Model on an Edge Rail Camera",
+          "author": "Jaewon Moon, Seungtaek Oh, Hyun Kwon Suh, Hyeonji Park, Ha Seon Sim, Jung Su Jo, Sung Kyeom Kim, Seungwook Choi, Francisco Andres Pérez",
+          "cite": "Computers and Electronics in Agriculture (published; 20 December 2024)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0168169924012079"
+        },
+        {
+          "title": "Development and evaluation of automated monitoring systems for multi-stage strawberry growth detection using advanced deep learning models",
+          "author": "Hyeonji Park, Nala Shin, Seungwoo Kum, Sung Kyeom Kim, Yoel Kim, Soungwook Choi, Do Yeon Won, Hyun Kwon Suh",
+          "cite": "Computers and Electronics in Agriculture (review in progress)",
+          "url": ""
+        },
+        {
           "title": "Evaluating Time-Series Prediction of Temperature, Relative Humidity, and CO2 in the Greenhouse with Transformer-Based and RNN-Based Models",
           "author": "Ju Yeon Ahn, Yoel Kim, Hyeonji Park, Soo Hyun Park, Hyun Kwon Suh",
           "cite": "Agronomy (published; 21 Feb 2024)",
           "url": "https://doi.org/10.3390/agronomy14030417"
-        },
-        {
-          "title": "Automated Strawberry Growth Monitoring in Greenhouses: A Comparative Study on Fruit and Flower Detection Models",
-          "author": "",
-          "cite": "Remote sensing (in preparation)",
-          "url": ""
         }
       ]
     },
     {
       "year": 2023,
       "content": [
-        {
-          "title": "Novel Method for Crop Growth Tracking with Deep Learning Model on an Edge Rail Camera",
-          "author": "Jaewon Moon, Seungtaek Oh, Hyun Kwon Suh, Hyeonji Park, Ha Seon Sim, Jung Su Jo, Sung Kyeom Kim, Seungwook Choi, Francisco Andres Pérez",
-          "cite": "Computers and Electronics in Agriculture (review in progress)",
-          "url": ""
-        },
         {
           "title": "RNN-based Models for Effective Prediction of Crop Growth Based on Environmental Factors",
           "author": "Ju Yeon Ahn, Hyeonji Park, Yoel Kim, Doyeon Kim, Soo Hyun Park, Hyun Kwon Suh",
