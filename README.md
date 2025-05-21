@@ -17,7 +17,7 @@ This is the official website for the AgTech Laboratory at Sejong University. The
 ## 🖥️ Local Development
 1. Clone the repository:
    ```bash
-   git clone https://github.com/agtechresearch/agtech.git
+   git clone https://github.com/agtechresearch/agtechresearch.github.io.git
    cd agtech
    ```
 2. Open `index.html` in your browser.
@@ -28,7 +28,7 @@ No build step is required (pure static site).
 1. Go to your repository's **Settings > Pages**
 2. Set the source to `main` branch and `/ (root)`
 3. Save and wait a few minutes
-4. Your site will be live at: `https://agtechresearch.github.io/agtech/`
+4. Your site will be live at: `https://agtechresearch.github.io/`
 
 ## 📁 Folder Structure
 ```
