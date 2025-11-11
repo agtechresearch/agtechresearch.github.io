@@ -114,27 +114,27 @@ function initParticleAnimation() {
     let mouse = { x: null, y: null };
     let mouseParticle = null; // 마우스 위치의 점
     const maxDistance = 150; // 점들 사이 연결 거리
-    const particleCount = 240; // 점 개수 (3배 증가)
 
-    // 캔버스 크기 설정
-    function resizeCanvas() {
-        if (hero) {
-            canvas.width = hero.offsetWidth;
-            canvas.height = hero.offsetHeight;
+    // 화면 크기에 따라 파티클 개수 계산
+    function getParticleCount() {
+        const width = window.innerWidth;
+        if (width < 600) {
+            return 80;  // 모바일: 80개
+        } else if (width < 992) {
+            return 150; // 태블릿: 150개
+        } else {
+            return 240; // 데스크톱: 240개
         }
     }
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
 
     // Particle 클래스
     class Particle {
         constructor(x, y) {
             this.x = x !== undefined ? x : Math.random() * canvas.width;
             this.y = y !== undefined ? y : Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 1.2; // 속도 1.5배 증가 (0.8 * 1.5)
-            this.vy = (Math.random() - 0.5) * 1.2; // 속도 1.5배 증가 (0.8 * 1.5)
-            this.radius = 0.25; // 선 굵기(0.5)의 절반으로 지름이 0.5가 되어 선 굵기와 동일
+            this.vx = (Math.random() - 0.5) * 1.2;
+            this.vy = (Math.random() - 0.5) * 1.2;
+            this.radius = 1.5; // 점 크기
         }
 
         update() {
@@ -153,7 +153,7 @@ function initParticleAnimation() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(136, 136, 136, 0.7)'; // 이전과 현재 사이의 진하기
+            ctx.fillStyle = 'rgba(136, 136, 136, 0.8)';
             ctx.fill();
         }
 
@@ -163,20 +163,50 @@ function initParticleAnimation() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < maxDistance) {
-                // 거리에 따라 투명도 조절 (가까울수록 진하게)
                 const opacity = 1 - (distance / maxDistance);
                 ctx.beginPath();
                 ctx.moveTo(this.x, this.y);
                 ctx.lineTo(other.x, other.y);
-                ctx.strokeStyle = `rgba(136, 136, 136, ${opacity * 0.6})`; // 이전과 현재 사이의 진하기
-                ctx.lineWidth = 0.5; // 점 크기와 동일하게
+                ctx.strokeStyle = `rgba(136, 136, 136, ${opacity * 0.5})`;
+                ctx.lineWidth = 1;
                 ctx.stroke();
             }
         }
     }
 
+    // 캔버스 크기 설정 및 파티클 재생성
+    function resizeCanvas() {
+        if (hero) {
+            canvas.width = hero.offsetWidth;
+            canvas.height = hero.offsetHeight;
+
+            // 파티클 개수 재조정
+            const newCount = getParticleCount();
+            const currentCount = particles.filter(p => p !== mouseParticle).length;
+
+            if (newCount > currentCount) {
+                // 파티클 추가
+                for (let i = 0; i < newCount - currentCount; i++) {
+                    particles.push(new Particle());
+                }
+            } else if (newCount < currentCount) {
+                // 파티클 제거 (마우스 파티클은 유지)
+                particles = particles.filter((p, i) =>
+                    p === mouseParticle || i < newCount
+                );
+            }
+        }
+    }
+
+    // 초기 캔버스 크기 설정
+    resizeCanvas();
+
+    // 화면 크기 변경 시 캔버스 크기 및 파티클 재조정
+    window.addEventListener('resize', resizeCanvas);
+
     // 파티클 생성
-    for (let i = 0; i < particleCount; i++) {
+    const initialCount = getParticleCount();
+    for (let i = 0; i < initialCount; i++) {
         particles.push(new Particle());
     }
 
