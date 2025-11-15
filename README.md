@@ -1,9 +1,9 @@
-# AgTech Laboratory Website
+# AgTech Research Lab Website
 
-This is the official website for the AgTech Laboratory at Sejong University. The site introduces the lab's research, members, publications, and activities, and provides contact information for collaboration and inquiries.
+This is the official website for the AgTech Research Lab at Sejong University. The site introduces the lab's research, members, publications, and activities, and provides contact information for collaboration and inquiries.
 
 ## 🌱 Project Overview
-- **Lab:** AgTech Laboratory, Sejong University
+- **Lab:** AgTech Research Lab, Sejong University
 - **Purpose:** Showcase research projects, members, publications, gallery, and contact details
 - **Tech Stack:** HTML, CSS, JavaScript (Vanilla)
 
@@ -90,10 +90,10 @@ If neither is configured, the form will use `mailto:` as a fallback.
 Contributions are welcome! Please open an issue or pull request for suggestions, bug fixes, or improvements.
 
 ## 📬 Contact
-- **Lab:** AgTech Laboratory, Sejong University
+- **Lab:** AgTech Research Lab, Sejong University
 - **Address:** Chungmugwan 502B, 209 Neungdong-ro, Gwangjin-gu, Seoul
 - **Email:** agtech@sejong.ac.kr
 
 ---
 
-© 2024 AgTech Laboratory. All rights reserved. 
+© 2024 AgTech Research Lab. All rights reserved. 
