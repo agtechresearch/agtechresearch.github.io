@@ -167,8 +167,7 @@ function initParticleAnimation() {
                 ctx.beginPath();
                 ctx.moveTo(this.x, this.y);
                 ctx.lineTo(other.x, other.y);
-                // R 195, G 0, B 47에서 점점 연해지면서 사라지는 구조
-                ctx.strokeStyle = `rgba(195, 0, 47, ${opacity * 0.6})`;
+                ctx.strokeStyle = `rgba(136, 136, 136, ${opacity * 0.5})`;
                 ctx.lineWidth = 1;
                 ctx.stroke();
             }
