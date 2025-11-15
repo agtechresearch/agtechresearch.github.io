@@ -55,75 +55,78 @@
     <section class="gallery-grid">
         <div class="container">
             <div class="gallery-items">
-                <!-- 예시 갤러리 아이템들 (주석 처리됨) -->
-                <!--
-                Laboratory Photos
+                <!-- Laboratory Photos -->
                 <div class="gallery-item" data-category="lab">
                     <div class="gallery-image">
-                        <img src="images/gallery/lab1.jpg"
-                             alt="Laboratory View"
+                        <img src="images/gallery/chamdog_to.jpg"
+                             alt="Laboratory"
                              loading="lazy">
                         <div class="gallery-overlay">
-                            <h3>Laboratory View</h3>
-                            <p>Chungmugwan 502B, Sejong University</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="lab">
-                    <div class="gallery-image">
-                        <img src="images/gallery/lab2.jpg"
-                             alt="Laboratory Interior"
-                             loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Laboratory Interior</h3>
-                            <p>Research Space</p>
+                            <h3>Laboratory</h3>
+                            <p>AgTech Research Lab</p>
                         </div>
                     </div>
                 </div>
 
-                Event Photos
+                <!-- Event Photos -->
                 <div class="gallery-item" data-category="event">
                     <div class="gallery-image">
-                        <img src="images/gallery/event1.jpg" alt="Graduation Ceremony">
+                        <img src="images/gallery/ASABE_pr.JPG"
+                             alt="ASABE Presentation"
+                             loading="lazy">
                         <div class="gallery-overlay">
-                            <h3>Graduation Ceremony</h3>
-                            <p>Spring 2024 Graduation</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="event">
-                    <div class="gallery-image">
-                        <img src="images/gallery/event2.jpg" alt="Seminar">
-                        <div class="gallery-overlay">
-                            <h3>Regular Seminar</h3>
-                            <p>Spring 2024 Regular Seminar</p>
+                            <h3>ASABE Presentation</h3>
+                            <p>Conference Event</p>
                         </div>
                     </div>
                 </div>
 
-                Research Activity Photos
-                <div class="gallery-item" data-category="research">
+                <div class="gallery-item" data-category="event">
                     <div class="gallery-image">
-                        <img src="images/gallery/research1.jpg" alt="Field Experiment">
+                        <img src="images/gallery/bug_monitering.jpg"
+                             alt="Bug Monitoring"
+                             loading="lazy">
                         <div class="gallery-overlay">
-                            <h3>Field Experiment</h3>
-                            <p>Smart Farm Field Experiment</p>
+                            <h3>Bug Monitoring</h3>
+                            <p>Lab Event</p>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item" data-category="research">
+
+                <div class="gallery-item" data-category="event">
                     <div class="gallery-image">
-                        <img src="images/gallery/research2.jpg" alt="Research Equipment">
+                        <img src="images/gallery/chamdog_fes.JPG"
+                             alt="Festival"
+                             loading="lazy">
                         <div class="gallery-overlay">
-                            <h3>Research Equipment</h3>
-                            <p>Smart Agricultural Robot</p>
+                            <h3>Festival</h3>
+                            <p>Lab Event</p>
                         </div>
                     </div>
                 </div>
-                -->
+
+                <!-- Research Activity Photos -->
+                <div class="gallery-item" data-category="research">
+                    <div class="gallery-image">
+                        <img src="images/gallery/chamdo_lo.JPG"
+                             alt="Research Activity"
+                             loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Research Activity</h3>
+                            <p>Field Research</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -132,7 +135,6 @@
                 <div class="footer-info">
                     <h3>AgTech Research Lab</h3>
                     <p>Chungmugwan 502B, Sejong University</p>
-                    <p>Tel: 02-3408-3879</p>
                 </div>
             </div>
             <div class="footer-bottom">

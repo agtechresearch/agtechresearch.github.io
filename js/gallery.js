@@ -31,4 +31,43 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('loaded');
         });
     });
+
+    // Lightbox 기능
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    // 갤러리 이미지 클릭 시 lightbox 열기
+    galleryItems.forEach(item => {
+        const img = item.querySelector('.gallery-image img');
+        const overlay = item.querySelector('.gallery-overlay');
+
+        item.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            const title = overlay.querySelector('h3').textContent;
+            const subtitle = overlay.querySelector('p').textContent;
+            lightboxCaption.innerHTML = `<strong>${title}</strong><br>${subtitle}`;
+        });
+    });
+
+    // lightbox 닫기
+    lightboxClose.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // lightbox 배경 클릭 시 닫기
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+
+    // ESC 키로 닫기
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+            lightbox.style.display = 'none';
+        }
+    });
 }); 
