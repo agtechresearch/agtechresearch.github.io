@@ -38,36 +38,73 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.querySelector('.lightbox-close');
 
+    // Lightbox 요소들이 존재하는지 확인
+    if (!lightbox || !lightboxImg || !lightboxCaption) {
+        console.error('Lightbox elements not found');
+        return;
+    }
+
+    // lightbox 닫기 함수
+    function closeLightbox() {
+        if (lightbox) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // 스크롤 복원
+        }
+    }
+
     // 갤러리 이미지 클릭 시 lightbox 열기
     galleryItems.forEach(item => {
         const img = item.querySelector('.gallery-image img');
         const overlay = item.querySelector('.gallery-overlay');
 
-        item.addEventListener('click', () => {
-            lightbox.style.display = 'flex';
+        if (!img || !overlay) return;
+
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // 이미지 소스 설정
             lightboxImg.src = img.src;
-            const title = overlay.querySelector('h3').textContent;
-            const subtitle = overlay.querySelector('p').textContent;
-            lightboxCaption.innerHTML = `<strong>${title}</strong><br>${subtitle}`;
+            lightboxImg.alt = img.alt || '';
+            
+            // 캡션 설정
+            const title = overlay.querySelector('h3');
+            const subtitle = overlay.querySelector('p');
+            
+            if (title && subtitle) {
+                lightboxCaption.innerHTML = `<strong>${title.textContent}</strong><br>${subtitle.textContent}`;
+            } else if (title) {
+                lightboxCaption.innerHTML = `<strong>${title.textContent}</strong>`;
+            } else {
+                lightboxCaption.innerHTML = '';
+            }
+            
+            // Lightbox 표시
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // 스크롤 방지
         });
     });
 
-    // lightbox 닫기
-    lightboxClose.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
+    // lightbox 닫기 버튼
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeLightbox();
+        });
+    }
 
     // lightbox 배경 클릭 시 닫기
     lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.display = 'none';
+        if (e.target === lightbox || e.target === lightboxImg) {
+            closeLightbox();
         }
     });
 
     // ESC 키로 닫기
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
-            lightbox.style.display = 'none';
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+            closeLightbox();
         }
     });
 }); 
