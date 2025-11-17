@@ -1,0 +1,16 @@
+{
+  "name": "agtech-research-lab",
+  "version": "1.0.0",
+  "description": "AgTech Research Lab Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@octokit/rest": "^19.0.11"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
