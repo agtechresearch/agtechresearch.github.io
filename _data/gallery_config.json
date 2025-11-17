@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "name": "all",
+      "label": "All",
+      "description": "Show all gallery images"
+    },
+    {
+      "name": "laboratory",
+      "label": "Laboratory",
+      "description": "Laboratory facilities and equipment"
+    },
+    {
+      "name": "event",
+      "label": "Events",
+      "description": "Lab events and conferences"
+    },
+    {
+      "name": "research",
+      "label": "Research",
+      "description": "Field research and experiments"
+    }
+  ]
+}
