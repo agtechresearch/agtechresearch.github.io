@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Manager - AgTech Research Lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .alert strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .file-drop-area {
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            background: #fafafa;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .file-drop-area:hover,
+        .file-drop-area.highlight {
+            border-color: #000;
+            background: #f0f0f0;
+        }
+
+        .file-drop-area.has-file {
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .preview-image {
+            max-width: 300px;
+            max-height: 300px;
+            margin: 20px auto;
+            display: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #000;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #333;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .gallery-list {
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background: #fafafa;
+        }
+
+        .gallery-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+
+        .gallery-item-info {
+            flex: 1;
+        }
+
+        .gallery-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .gallery-item-meta {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .output-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .instructions {
+            background: #e7f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 갤러리 관리 도구</h1>
+        <p class="subtitle">AgTech Research Lab - 로컬 갤러리 이미지 추가 도구</p>
+
+        <div class="alert">
+            <strong>⚠️ 사용 방법</strong>
+            이 도구는 로컬에서만 실행됩니다. 이미지 정보를 입력하면 JSON 코드가 생성됩니다.<br>
+            생성된 파일들을 GitHub Desktop으로 커밋하면 웹사이트에 반영됩니다.
+        </div>
+
+        <form id="galleryForm">
+            <div class="form-group">
+                <label for="title">제목 *</label>
+                <input type="text" id="title" name="title" required placeholder="예: 2025 ASABE 학회 발표">
+            </div>
+
+            <div class="form-group">
+                <label for="description">설명 *</label>
+                <input type="text" id="description" name="description" required placeholder="예: 국제 학회 발표">
+            </div>
+
+            <div class="form-group">
+                <label for="category">카테고리 *</label>
+                <select id="category" name="category" required>
+                    <option value="">선택하세요</option>
+                    <option value="laboratory">Laboratory (연구실 시설)</option>
+                    <option value="event">Event (행사 및 학회)</option>
+                    <option value="research">Research (현장 연구)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="alt">이미지 설명 (Alt Text) *</label>
+                <input type="text" id="alt" name="alt" required placeholder="예: ASABE Conference Presentation">
+            </div>
+
+            <div class="form-group">
+                <label for="date">날짜 *</label>
+                <input type="datetime-local" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label>이미지 업로드 *</label>
+                <div class="file-drop-area" id="fileDropArea">
+                    <p>📁 이미지를 드래그 앤 드롭하거나 클릭하여 선택하세요</p>
+                    <p style="font-size: 12px; color: #666; margin-top: 10px;">JPG, PNG 파일만 가능 (최대 5MB)</p>
+                </div>
+                <input type="file" id="fileInput" class="file-input" accept="image/*" required>
+                <img id="previewImage" class="preview-image">
+            </div>
+
+            <button type="submit" class="btn btn-primary">✅ JSON 생성하기</button>
+            <button type="button" class="btn btn-secondary" onclick="resetForm()">🔄 초기화</button>
+        </form>
+
+        <div class="output-section" id="outputSection" style="display: none;">
+            <h3>✅ 생성 완료!</h3>
+            <p style="margin-top: 10px; color: #666;">아래 내용을 따라 파일을 생성하세요:</p>
+
+            <div style="margin-top: 20px;">
+                <h4>1️⃣ JSON 파일 생성</h4>
+                <p style="font-size: 14px; color: #666;">경로: <code id="jsonFilePath"></code></p>
+                <div class="code-block" id="jsonOutput"></div>
+                <button class="btn btn-secondary" onclick="copyJSON()" style="margin-top: 10px;">📋 JSON 복사</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h4>2️⃣ gallery.js 업데이트</h4>
+                <p style="font-size: 14px; color: #666;">파일: <code>js/gallery.js</code> (12-18번째 줄)</p>
+                <div class="code-block" id="jsOutput"></div>
+                <button class="btn btn-secondary" onclick="copyJS()" style="margin-top: 10px;">📋 JS 복사</button>
+            </div>
+
+            <div class="instructions">
+                <strong>📝 다음 단계:</strong>
+                <ol>
+                    <li>이미지를 <code>images/gallery/</code> 폴더에 복사</li>
+                    <li>위 JSON 내용으로 <code id="jsonFilePathCopy"></code> 파일 생성</li>
+                    <li><code>js/gallery.js</code> 파일의 12-18번째 줄을 위 코드로 교체</li>
+                    <li>GitHub Desktop에서 변경사항 확인</li>
+                    <li>커밋 메시지 작성: "Add gallery image: [제목]"</li>
+                    <li>"Commit to main" → "Push origin" 클릭</li>
+                    <li>1-2분 후 웹사이트에서 확인!</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedFile = null;
+        let currentFileName = '';
+
+        // Set default date to now
+        document.getElementById('date').value = new Date().toISOString().slice(0, 16);
+
+        // File drop area handlers
+        const fileDropArea = document.getElementById('fileDropArea');
+        const fileInput = document.getElementById('fileInput');
+        const previewImage = document.getElementById('previewImage');
+
+        fileDropArea.addEventListener('click', () => fileInput.click());
+
+        fileDropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileDropArea.classList.add('highlight');
+        });
+
+        fileDropArea.addEventListener('dragleave', () => {
+            fileDropArea.classList.remove('highlight');
+        });
+
+        fileDropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileDropArea.classList.remove('highlight');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            if (!file.type.startsWith('image/')) {
+                alert('이미지 파일만 업로드 가능합니다.');
+                return;
+            }
+
+            if (file.size > 5 * 1024 * 1024) {
+                alert('파일 크기는 5MB 이하여야 합니다.');
+                return;
+            }
+
+            selectedFile = file;
+            currentFileName = file.name;
+
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                previewImage.src = e.target.result;
+                previewImage.style.display = 'block';
+                fileDropArea.classList.add('has-file');
+                fileDropArea.innerHTML = `<p>✅ ${file.name} (${(file.size / 1024).toFixed(1)} KB)</p><p style="font-size: 12px; color: #666; margin-top: 10px;">클릭하여 다른 이미지 선택</p>`;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Form submission
+        document.getElementById('galleryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (!selectedFile) {
+                alert('이미지를 선택해주세요.');
+                return;
+            }
+
+            const formData = {
+                title: document.getElementById('title').value,
+                description: document.getElementById('description').value,
+                category: document.getElementById('category').value,
+                alt: document.getElementById('alt').value,
+                date: new Date(document.getElementById('date').value).toISOString(),
+                image: `images/gallery/${currentFileName}`,
+                published: true
+            };
+
+            // Generate filename from date and title
+            const dateObj = new Date(formData.date);
+            const slug = formData.title.toLowerCase()
+                .replace(/[^a-z0-9가-힣]/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-|-$/g, '')
+                .substring(0, 30);
+            const jsonFileName = `${dateObj.getFullYear()}-${String(dateObj.getMonth() + 1).padStart(2, '0')}-${String(dateObj.getDate()).padStart(2, '0')}-${slug}.json`;
+
+            // Generate JSON output
+            const jsonOutput = JSON.stringify(formData, null, 2);
+            const jsonFilePath = `_data/gallery/${jsonFileName}`;
+
+            document.getElementById('jsonOutput').textContent = jsonOutput;
+            document.getElementById('jsonFilePath').textContent = jsonFilePath;
+            document.getElementById('jsonFilePathCopy').textContent = jsonFilePath;
+
+            // Load current gallery files list
+            loadGalleryFilesList(jsonFileName);
+
+            // Show output section
+            document.getElementById('outputSection').style.display = 'block';
+            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        async function loadGalleryFilesList(newFileName) {
+            // Read current gallery.js to get file list
+            const defaultFiles = [
+                '2024-11-01-asabe-presentation.json',
+                '2024-11-02-bug-monitoring.json',
+                '2024-11-03-festival.json',
+                '2024-11-04-chamdo-research.json',
+                '2024-11-05-chamdog-research.json'
+            ];
+
+            // Add new file to the list
+            const allFiles = [...defaultFiles, newFileName];
+
+            // Generate JS code
+            const jsCode = `const galleryFiles = [\n${allFiles.map(f => `                '${f}'`).join(',\n')}\n            ];`;
+
+            document.getElementById('jsOutput').textContent = jsCode;
+        }
+
+        function copyJSON() {
+            const text = document.getElementById('jsonOutput').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ JSON 코드가 복사되었습니다!');
+            });
+        }
+
+        function copyJS() {
+            const text = document.getElementById('jsOutput').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ JS 코드가 복사되었습니다!');
+            });
+        }
+
+        function resetForm() {
+            document.getElementById('galleryForm').reset();
+            selectedFile = null;
+            currentFileName = '';
+            previewImage.style.display = 'none';
+            fileDropArea.classList.remove('has-file');
+            fileDropArea.innerHTML = '<p>📁 이미지를 드래그 앤 드롭하거나 클릭하여 선택하세요</p><p style="font-size: 12px; color: #666; margin-top: 10px;">JPG, PNG 파일만 가능 (최대 5MB)</p>';
+            document.getElementById('outputSection').style.display = 'none';
+            document.getElementById('date').value = new Date().toISOString().slice(0, 16);
+        }
+    </script>
+</body>
+</html>
