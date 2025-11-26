@@ -275,57 +275,108 @@ body.home-page #brainCanvas {
     width: 100%;
 }
 
+/* 태블릿 크기 */
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
         gap: 4rem;
         text-align: center;
     }
-    
+
     .hero-left h1 {
-        font-size: 5.25rem; /* 3.5rem * 1.5 */
+        font-size: 5.25rem;
     }
-    
+
     .hero-right {
         justify-content: center;
     }
-    
+
     .hero-nav {
         align-items: center;
     }
-    
+
+    .nav-icon-link {
+        text-align: center;
+    }
+
     .hero-nav a::after {
         left: 0;
         right: auto;
     }
 }
 
-@media (max-width: 600px) {
+/* 모바일 크기 */
+@media (max-width: 768px) {
     .hero {
         min-height: 100vh;
         padding: 4rem 2rem;
     }
 
     .hero-container {
+        padding: 0 1.5rem;
         gap: 3rem;
-        padding: 0 1rem;
+        text-align: center;
     }
 
     .hero-left h1 {
-        font-size: 3.75rem; /* 2.5rem * 1.5 */
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-right {
+        justify-content: center;
+    }
+
+    .hero-nav {
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .nav-icon-link {
+        font-size: 1.1rem;
+        padding: 0.3rem 0.6rem;
+        min-width: 120px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-container {
+        gap: 3rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 3rem;
         letter-spacing: -1.5px;
     }
 
     .hero-subtitle {
-        font-size: 1.8rem; /* 1.2rem * 1.5 */
+        font-size: 1.3rem;
+    }
+
+    .hero-right {
+        justify-content: center;
     }
 
     .hero-nav {
-        gap: 0.6rem; /* 간격 좁힘 */
+        gap: 0.4rem;
+        align-items: center;
     }
 
-    .hero-nav a {
-        font-size: 2rem; /* 1rem * 2 */
+    .nav-icon-link {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+        min-width: 100px;
+        text-align: center;
     }
 }
 
@@ -339,6 +390,7 @@ body.home-page #brainCanvas {
     .hero-container {
         gap: 2rem;
         padding: 0 0.5rem;
+        text-align: center;
     }
 
     .hero-left h1 {
@@ -355,12 +407,24 @@ body.home-page #brainCanvas {
         overflow-wrap: break-word;
     }
 
+    .hero-right {
+        justify-content: center;
+    }
+
     .hero-nav {
         gap: 0.5rem;
+        align-items: center;
+    }
+
+    .nav-icon-link {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.4rem;
+        min-width: 90px;
+        text-align: center;
     }
 
     .hero-nav a {
-        font-size: 1.4rem;
+        font-size: 0.9rem;
         word-break: keep-all;
         overflow-wrap: break-word;
     }
