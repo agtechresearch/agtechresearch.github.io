@@ -1,12 +1,12 @@
-/* 기본 스타일 - 흑백 디자인 */
+/* 기본 스타일 - 밝은 배경 디자인 (다른 페이지용) */
 :root {
-    --primary-color: #000000;
-    --secondary-color: #333333;
-    --dark-color: #000000;
-    --light-color: #f5f5f5;
-    --text-color: #1a1a1a;
-    --bg-color: #ffffff;
-    --border-color: #e0e0e0;
+    --primary-color: #2C3E50;
+    --secondary-color: #555555;
+    --dark-color: #1A1A1A;
+    --light-color: #FFFFFF;
+    --text-color: #333333;
+    --bg-color: #FFFFFF;
+    --border-color: #E0E0E0;
     --transition: all 0.3s ease;
     --container-padding: 20px;
 }
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: "Myriad Pro", "Myriad", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -26,14 +26,23 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* 모든 제목 요소에 Times New Roman 적용 */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Times New Roman", Times, serif;
+/* 홈페이지만 어두운 배경 */
+body.home-page {
+    --primary-color: #FFFFFF;
+    --secondary-color: #CCCCCC;
+    --text-color: #FFFFFF;
+    --bg-color: #111111;
+    --border-color: #333333;
 }
 
-/* 본문 텍스트는 Myriad Pro */
+/* 모든 제목 요소에 Exo 2 적용 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Exo 2", sans-serif;
+}
+
+/* 본문 텍스트는 Inter */
 p, span, div, a, li, td, th {
-    font-family: "Myriad Pro", "Myriad", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -116,17 +125,38 @@ p, span, div, a, li, td, th {
     transition: var(--transition);
 }
 
-/* 히어로 섹션 - 서울대 스타일 */
+/* 히어로 섹션 - 뇌 파티클 배경 */
 .hero {
     min-height: 100vh;
-    background: #ffffff;
+    background: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--dark-color);
+    color: var(--text-color);
     padding: 6rem 4rem;
     position: relative;
     overflow: hidden;
+}
+
+/* 홈페이지 히어로 섹션 - 어두운 배경 */
+body.home-page .hero {
+    background: #111111;
+}
+
+/* 뇌 파티클 캔버스 - 홈페이지에만 표시 */
+#brainCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: auto;
+    display: none;
+}
+
+body.home-page #brainCanvas {
+    display: block;
 }
 
 #particleCanvas {
@@ -140,40 +170,45 @@ p, span, div, a, li, td, th {
 }
 
 .hero-container {
-    max-width: 1300px;
+    max-width: 1400px;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 8rem;
     align-items: center;
     position: relative;
-    z-index: 1;
-    padding: 0 2rem;
+    z-index: 3;
+    padding: 0 4rem;
+    pointer-events: none;
+}
+
+.hero-container * {
+    pointer-events: auto;
 }
 
 .hero-left,
 .hero-right {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-left h1 {
-    font-size: 6.75rem; /* 4.5rem * 1.5 */
+    font-size: 6.75rem;
     font-weight: 400;
     letter-spacing: -2px;
-    color: var(--dark-color);
+    color: var(--primary-color);
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Exo 2", sans-serif;
 }
 
 .hero-subtitle {
-    font-size: 2.25rem; /* 1.5rem * 1.5 */
+    font-size: 2.25rem;
     font-weight: 400;
     color: var(--secondary-color);
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Exo 2", sans-serif;
 }
 
 .hero-right {
@@ -187,20 +222,38 @@ p, span, div, a, li, td, th {
 .hero-nav {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem; /* 간격 좁힘 */
+    gap: 0.8rem;
     align-items: flex-end;
 }
 
-.hero-nav a {
-    color: var(--dark-color);
+/* 내비게이션 아이콘 링크 */
+.nav-icon-link {
+    color: var(--primary-color);
     text-decoration: none;
-    font-size: 2.2rem; /* 1.1rem * 2 */
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 0.8rem;
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    min-width: 150px;
+    text-align: right;
+}
+
+.nav-icon-link .nav-text {
+    display: inline-block;
+}
+
+.hero-nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     position: relative;
     padding-right: 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Inter", sans-serif;
 }
 
 .hero-nav a::after {
