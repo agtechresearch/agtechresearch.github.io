@@ -2,6 +2,11 @@ backend:
   name: github
   repo: agtechresearch/agtechresearch.github.io
   branch: main
+  # For local development and testing
+  # Use GitHub OAuth App for production
+
+# Local backend for development (optional)
+# local_backend: true
 
 media_folder: "images/gallery"
 public_folder: "/images/gallery"
