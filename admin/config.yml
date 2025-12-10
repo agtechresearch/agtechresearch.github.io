@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: agtechresearch/agtechresearch.github.io
   branch: main
 
 media_folder: "images/gallery"
